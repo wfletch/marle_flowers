@@ -147,7 +147,15 @@
      Flowers
   ======================= */
   const flowers = [];
-  const FLOWER_COUNT = 90;
+    const START_DATE = new Date("2025-12-10T00:00:00");
+    const TODAY = new Date();
+
+    const MS_PER_DAY = 1000 * 60 * 60 * 24;
+
+    const FLOWER_COUNT = Math.max(
+    1,
+    Math.floor((TODAY - START_DATE) / MS_PER_DAY)
+    );
 
   function createFlowers() {
     flowers.length = 0;
