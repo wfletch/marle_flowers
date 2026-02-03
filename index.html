@@ -35,40 +35,62 @@
   <header class="h-10 px-4 flex items-center justify-center border-b border-base-300">
     <div class="flex items-center gap-2 opacity-80">
       <!-- DaisyUI SVG Logo -->
-      <svg
-        width="28"
-        height="28"
-        viewBox="0 0 415 415"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <rect width="415" height="415" rx="72" fill="currentColor"/>
-        <path
-          d="M128 304C128 315.046 136.954 324 148 324H266C277.046 324 286 315.046 286 304V111C286 99.9543 277.046 91 266 91H148C136.954 91 128 99.9543 128 111V304Z"
-          fill="white"
-        />
-      </svg>
-      <span class="text-sm font-semibold">Canvas Demo</span>
+      <!-- <svg -->
+      <!--   width="28" -->
+      <!--   height="28" -->
+      <!--   viewBox="0 0 415 415" -->
+      <!--   fill="none" -->
+      <!--   xmlns="http://www.w3.org/2000/svg" -->
+      <!-- > -->
+      <!--   <rect width="415" height="415" rx="72" fill="currentColor"/> -->
+      <!--   <path -->
+      <!--     d="M128 304C128 315.046 136.954 324 148 324H266C277.046 324 286 315.046 286 304V111C286 99.9543 277.046 91 266 91H148C136.954 91 128 99.9543 128 111V304Z" -->
+      <!--     fill="white" -->
+      <!--   /> -->
+      <!-- </svg> -->
+      <span class="text-sm font-semibold">Flowers On Demand</span>
     </div>
   </header>
 
   <!-- MAIN CONTENT -->
-  <main class="flex-1 flex items-center justify-center">
+  <main class="flex-1 flex items-end justify-center">
     <div class="w-full">
       <canvas
         id="mainCanvas"
-        class="w-full h-[60vh] bg-base-200"
+        class="w-full h-full bg-base-200"
       ></canvas>
     </div>
   </main>
 
   <!-- FOOTER -->
+
 <footer class="h-8 px-4 flex items-center justify-center border-t border-base-300 text-xs opacity-70">
-  <span>
-    made with <span class="text-error">❤</span> for Marle Visagie
+  <span class="flex items-center gap-1.5">
+    made with <span class="text-error">❤</span> for Marlè Visagie by
+    <a
+      href="https://instagram.com/the_fokken_prawn"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center gap-1 hover:opacity-100 opacity-80"
+      aria-label="Instagram: the_fokken_prawn"
+    >
+      <!-- Instagram logo -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="currentColor"
+        class="w-3.5 h-3.5 text-error"
+      >
+        <path d="M7.75 2h8.5C19.55 2 22 4.45 22 7.75v8.5C22 19.55 19.55 22 16.25 22h-8.5C4.45 22 2 19.55 2 16.25v-8.5C2 4.45 4.45 2 7.75 2zm0 1.5C5.28 3.5 3.5 5.28 3.5 7.75v8.5c0 2.47 1.78 4.25 4.25 4.25h8.5c2.47 0 4.25-1.78 4.25-4.25v-8.5c0-2.47-1.78-4.25-4.25-4.25h-8.5z"/>
+        <path d="M12 7a5 5 0 100 10 5 5 0 000-10zm0 1.5a3.5 3.5 0 110 7 3.5 3.5 0 010-7z"/>
+        <circle cx="17.2" cy="6.8" r="1"/>
+      </svg>
+      <span class="underline-offset-2 hover:underline">
+        the_fokken_prawn
+      </span>
+    </a>
   </span>
 </footer>
-
   <!-- Canvas setup -->
 
   <script>
@@ -125,7 +147,7 @@
      Flowers
   ======================= */
   const flowers = [];
-  const FLOWER_COUNT = 45;
+  const FLOWER_COUNT = 90;
 
   function createFlowers() {
     flowers.length = 0;
